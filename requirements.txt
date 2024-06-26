@@ -6,3 +6,4 @@ python-dotenv
 faiss-cpu
 chromadb
 langchain_google_genai
+gunicorn
