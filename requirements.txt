@@ -1,0 +1,8 @@
+Flask
+PyPDF2
+langchain
+google-generativeai
+python-dotenv
+faiss-cpu
+chromadb
+langchain_google_genai

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Upload your PDF Files</h2>
+            <img src="{{ url_for('static', filename='upload1.png') }}" alt="Menu icon" class="menu-icon"/>
+            <p>Click on the Submit & Process Button</p>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="pdf_files" multiple>
+                <button type="submit">Submit & Process</button>
+            </form>
+        </div>
+        <div class="main-content">
+            <h1>Chat with PDF💁</h1>
+            <form action="/ask" method="post" class="question-form">
+                <button type="submit" class="ask-button">
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+                </button>
+                <input type="text" name="question" placeholder="Ask a Question from the PDF Files">
+            </form>
+            {% if response %}
+                <div class="response">
+                    <p><strong>Question:</strong> {{ question }}</p>
+                    <p><strong>Answer:</strong></p>
+                    <p>{{ response|safe }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

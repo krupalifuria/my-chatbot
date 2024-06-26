@@ -1,0 +1,173 @@
+/* Style the scrollbar */
+.response-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.response-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.response-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.response-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.menu-icon {
+    width: 313px;  /* Adjust the size of the image as needed */
+    height: 177px;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    left: -8px;
+    object-fit: cover; 
+}
+
+.sidebar p {
+    margin-bottom: 20px;
+}
+
+.sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    left: -1px;
+    position: relative;
+    padding: 10px 15px;  /* Reduced padding */
+    color: #fff;
+    background: linear-gradient(145deg, #007BFF, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #aaaaaa, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+    width: 176px;  /* Adjust width to fit content */
+}
+
+.sidebar button:hover {
+    background: linear-gradient(145deg, #0056b3, #007BFF);
+    box-shadow: 2px 2px 5px #aaaaaa, -2px -2px 5px #ffffff;
+    transform: translateY(-2px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align content to the top */
+    align-items: center;
+    background-image: url(../static/b1.avif);
+    background-size: cover;  
+    background-position: center;  
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    top: -30px;
+    left: -268px;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.question-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 838px;
+    margin-bottom: 20px;
+    top: -7px;
+    position: relative;
+    left: -28px;
+}
+
+.question-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ask-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    left: 800px;
+    position: relative;
+    top: 1px;
+}
+
+.ask-button .bi {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.ask-button:hover .bi {
+    color: #0056b3;
+}
+
+.response-container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 400px;  /* Set a maximum height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    margin-top: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.response {
+    margin-top: 3px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-sizing: border-box;
+}
+.response p {
+    line-height: 1.6;
+}
